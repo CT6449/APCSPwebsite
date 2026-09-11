@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <script>
+            //Navbar
+            var navbarAlpha = document.createElement("nav");
+            navbarAlpha.setAttribute("class", "navbar navbar-inverse");
+            var navbarBeta = document.createElement("div");
+            navbarBeta.setAttribute("class", "container-fluid");
+            var navbarGammaAlpha = document.createElement("div")
+            navbarGammaAlpha.setAttribute("class", "navbar-header");
+            var navbarDeltaAlphaAlpha = document.createElement("button");
+            navbarDeltaAlphaAlpha.setAttribute("type", "button");
+            navbarDeltaAlphaAlpha.setAttribute("class", "navbar-toggle");
+            navbarDeltaAlphaAlpha.setAttribute("data-toggle", "collapse");
+            navbarDeltaAlphaAlpha.setAttribute("data-target", "#myNavbar");
+            var navbarDeltaAlphaAlphaAlpha = document.createElement("span");
+            navbarDeltaAlphaAlphaAlpha.setAttribute("class", "icon-bar");
+            navbarDeltaAlphaAlpha.appendChild(navbarDeltaAlphaAlphaAlpha)
+            var navbarDeltaAlphaAlphaBeta = document.createElement("span");
+            navbarDeltaAlphaAlphaBeta.setAttribute("class", "icon-bar");
+            navbarDeltaAlphaAlpha.appendChild(navbarDeltaAlphaAlphaBeta)
+            var navbarDeltaAlphaAlphaGamma = document.createElement("span");
+            navbarDeltaAlphaAlphaGamma.setAttribute("class", "icon-bar");
+            navbarDeltaAlphaAlpha.appendChild(navbarDeltaAlphaAlphaGamma)
+            navbarGammaAlpha.appendChild(navbarDeltaAlphaAlpha)
+            var navbarDeltaAlphaBeta = document.createElement("a");
+            navbarDeltaAlphaBeta.setAttribute("class", "navbar-brand");
+            navbarDeltaAlphaBeta.setAttribute("style", "background-color:#4a4a4a");
+            navbarDeltaAlphaBeta.setAttribute("href", "index.html");
+            var navbarDeltaAlphaBetaAlpha = document.createElement("img");
+            navbarDeltaAlphaBetaAlpha.setAttribute("src", "https://upload.wikimedia.org/wikipedia/commons/f/f8/Stylized_uwu_emoticon.svg");
+            navbarDeltaAlphaBetaAlpha.setAttribute("width", "50px");
+            navbarDeltaAlphaBeta.appendChild(navbarDeltaAlphaBetaAlpha);
+            navbarGammaAlpha.appendChild(navbarDeltaAlphaBeta);
+            navbarBeta.appendChild(navbarGammaAlpha);
+            var navbarGammaBeta = document.createElement("div")
+            navbarGammaBeta.setAttribute("class", "collapse navbar-collapse");
+            navbarGammaBeta.setAttribute("id", "myNavbar");
+            var navbarDeltaBeta = document.createElement("ul");
+            navbarDeltaBeta.setAttribute("class", "nav navbar-nav");
+            var navbarEpsilonBetaAlpha = document.createElement("li");
+            var navbarZetaBetaAlpha = document.createElement("a");
+            navbarZetaBetaAlpha.setAttribute("href", "index.html");
+            navbarZetaBetaAlpha.innerHTML = "Home";
+            navbarEpsilonBetaAlpha.appendChild(navbarZetaBetaAlpha);
+            navbarDeltaBeta.appendChild(navbarEpsilonBetaAlpha);
+            var navbarEpsilonBetaBeta = document.createElement("li");
+            var navbarZetaBetaBeta = document.createElement("a");
+            navbarZetaBetaBeta.setAttribute("href", "bio.html");
+            navbarZetaBetaBeta.innerHTML = "Bio";
+            navbarEpsilonBetaBeta.appendChild(navbarZetaBetaBeta);
+            navbarDeltaBeta.appendChild(navbarEpsilonBetaBeta);
+            var navbarEpsilonBetaGamma = document.createElement("li");
+            var navbarZetaBetaGamma = document.createElement("a");
+            navbarZetaBetaGamma.setAttribute("href", "projects.html");
+            navbarZetaBetaGamma.innerHTML = "Projects";
+            navbarEpsilonBetaGamma.appendChild(navbarZetaBetaGamma);
+            navbarDeltaBeta.appendChild(navbarEpsilonBetaGamma);
+            var navbarEpsilonBetaDelta = document.createElement("li");
+            navbarEpsilonBetaDelta.setAttribute("class", "active");
+            var navbarZetaBetaDelta = document.createElement("a");
+            navbarZetaBetaDelta.setAttribute("href", "experimental.html");
+            navbarZetaBetaDelta.innerHTML = "Javascript Experiment";
+            navbarEpsilonBetaDelta.appendChild(navbarZetaBetaDelta);
+            navbarDeltaBeta.appendChild(navbarEpsilonBetaDelta);
+            
+            var navbarEpsilonBetaEpsilon = document.createElement("li");
+            var navbarZetaBetaEpsilon = document.createElement("a");
+            navbarZetaBetaEpsilon.setAttribute("href", "game.html");
+            navbarZetaBetaEpsilon.innerHTML = "Javascript";
+            navbarEpsilonBetaEpsilon.appendChild(navbarZetaBetaEpsilon);
+            navbarDeltaBeta.appendChild(navbarEpsilonBetaEpsilon);
+            
+            navbarGammaBeta.appendChild(navbarDeltaBeta);
+            navbarBeta.appendChild(navbarGammaBeta);
+            navbarAlpha.appendChild(navbarBeta);
+            document.body.appendChild(navbarAlpha);
+            //Main
+            var mainPage = document.createElement("main");
+            var bigText = document.createElement("h1");
+            bigText.innerHTML = "This page, was completely made with javascript!";
+            mainPage.appendChild(bigText);
+            var littleText = document.createElement("p");
+            littleText.innerHTML = "It was mostly just an experiment to see if I could do it";
+            mainPage.appendChild(littleText);
+            document.body.appendChild(mainPage);
+            //Footer
+            var bottomPage = document.createElement("footer");
+            bottomPage.setAttribute("class", "navbar-fixed-bottom");
+            var credits = document.createElement("p");
+            credits.innerHTML = "Created by: Bethany Moore, 2026";
+            bottomPage.appendChild(credits);
+            var school = document.createElement("p");
+            var schoolLink = document.createElement("a");
+            schoolLink.setAttribute("href", "https://granadahigh.livermoreschools.org/");
+            schoolLink.innerHTML = "My School";
+            school.appendChild(schoolLink);
+            bottomPage.appendChild(school);
+            var email = document.createElement("p");
+            var emailLink = document.createElement("a");
+            emailLink.setAttribute("href", "mailto:bethany.moo@lvjusd.org");
+            emailLink.innerHTML = "Email Me";
+            email.appendChild(emailLink);
+            bottomPage.appendChild(email);
+            document.body.appendChild(bottomPage);
+            //Head
+            var title = document.createElement("title");
+            title.innerHTML = "Experiment";
+            document.head.appendChild(title);
+            
+            var favicon = document.createElement("link");
+            favicon.setAttribute("rel", "icon");
+            favicon.setAttribute("type", "image/x-icon");
+            favicon.setAttribute("href", "https://upload.wikimedia.org/wikipedia/commons/f/f8/Stylized_uwu_emoticon.svg");
+            document.head.appendChild(favicon);
+            
+            var bootstrapAlpha = document.createElement("meta");
+            bootstrapAlpha.setAttribute("charset", "utf-8");
+            document.head.appendChild(bootstrapAlpha);
+            var bootstrapBeta = document.createElement("meta");
+            bootstrapBeta.setAttribute("name", "viewport");
+            bootstrapBeta.setAttribute("content", "width=device-width, initial-scale=1");
+            document.head.appendChild(bootstrapBeta);
+            var bootstrapGamma = document.createElement("link");
+            bootstrapGamma.setAttribute("rel", "stylesheet");
+            bootstrapGamma.setAttribute("href", "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+            document.head.appendChild(bootstrapGamma);
+            var bootstrapDelta = document.createElement("script");
+            bootstrapDelta.setAttribute("src", "https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js");
+            document.head.appendChild(bootstrapDelta);
+            var bootstrapEpsilon = document.createElement("script");
+            bootstrapEpsilon.setAttribute("src", "https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js");
+            document.head.appendChild(bootstrapEpsilon);
+            
+            var style = document.createElement("link");
+            style.setAttribute("rel", "stylesheet");
+            style.setAttribute("href", "style.css");
+            document.head.appendChild(style);
+        </script>
+    </body>
+</html>
