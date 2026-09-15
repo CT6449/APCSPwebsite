@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Game</title>
+        <!--Favicon-->
+        <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/f/f8/Stylized_uwu_emoticon.svg">
+        <!--Bootstrap stuff I guess-->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--My stylesheet-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" style="background-color:#4a4a4a;" href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Stylized_uwu_emoticon.svg" width="50px"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="bio.html">Bio</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="experiment.html">Javascript Experiment</a></li>
+                        <li class="active"><a href="game.html">Javascript Game</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <main>
+            <table style="border:2px solid black;">
+                <tr style="border:1px solid black;" height="100px">
+                    <td id="a1" style="border:1px solid black;" width="100px"></td>
+                    <td id="a2" style="border:1px solid black;" width="100px"></td>
+                    <td id="a3" style="border:1px solid black;" width="100px"></td>
+                </tr>
+                <tr style="border:1px solid black;" height="100px">
+                    <td id="b1" style="border:1px solid black;" width="100px"></td>
+                    <td id="b2" style="border:1px solid black;" width="100px"></td>
+                    <td id="b3" style="border:1px solid black;" width="100px"></td>
+                </tr>
+                <tr style="border:1px solid black;" height="100px">
+                    <td id="c1" style="border:1px solid black;" width="100px"></td>
+                    <td id="c2" style="border:1px solid black;" width="100px"></td>
+                    <td id="c3" style="border:1px solid black;" width="100px"></td>
+                </tr>
+            </table>
+            <button id="fly" onmousedown="dodge()">Click Me!</button>
+        </main>
+        <footer class="navbar-fixed-bottom">
+            <p>Created by: Bethany Moore, 2026</p>
+            <p><a href="https://granadahigh.livermoreschools.org/">My school</a></p>
+            <p><a href="mailto:bethany.moo@lvjusd.org">Email Me</a></p>
+        </footer>
+        <script>
+            var points = 0;
+            function dodge(){
+                var fly = document.getElementById("fly");
+                var newLoc = parseInt((9*Math.random())+1);
+                points++;
+                if(newLoc==1){
+                    document.getElementById("a1").appendChild(fly);
+                }
+                else if(newLoc==2){
+                    document.getElementById("a2").appendChild(fly);
+                }
+                else if(newLoc==3){
+                    document.getElementById("a3").appendChild(fly);
+                }
+                else if(newLoc==4){
+                    document.getElementById("b1").appendChild(fly);
+                }
+                else if(newLoc==5){
+                    document.getElementById("b2").appendChild(fly);
+                }
+                else if(newLoc==6){
+                    document.getElementById("b3").appendChild(fly);
+                }
+                else if(newLoc==7){
+                    document.getElementById("c1").appendChild(fly);
+                }
+                else if(newLoc==8){
+                    document.getElementById("c2").appendChild(fly);
+                }
+                else if(newLoc==9){
+                    document.getElementById("c3").appendChild(fly);
+                }
+                fly.innerHTML = "Points: " + points;
+            }
+        </script>
+    </body>
+</html>
