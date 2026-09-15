@@ -10,9 +10,20 @@ footer{
 div.row div {
     border: 1px solid black;
 }
+.project-image:hover{
+    animation: highlight 1s forwards;
+}
+@keyframes highlight{
+    from{
+        filter:brightness(100%);
+    }
+    to{
+        filter:brightness(120%);
+    }
+}
 .parallax{
     /* The image used */
-    background-image: url("https://static.wikia.nocookie.net/warhammer40k/images/2/22/CawlSothaExpedition.jpg");
+    background-image: url("https://cdn.gamedevmarket.net/wp-content/uploads/20191203183752/6e879affdfb65c5e7a7d79be1097a697.jpg");
 
     /* Set a specific height */
     min-height: 1200px; 
@@ -22,4 +33,9 @@ div.row div {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+@media only screen and (max-width:765px){
+    .parallax{
+        background-attachment:scroll;
+    }
 }
