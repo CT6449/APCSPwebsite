@@ -49,7 +49,7 @@
                 <tr>
                     <td>Warhammer 40k</td>
                     <td>I really like the world of warhammer 40k, it's really dark to the point of absurdity, and it's just fun to be evil sometimes. I'm starting to learn the actual wargame of it, but it's kind of intimidating just due to cost and stuff.</td>
-                    <td><a href="https://warhammer40k.fandom.com/wiki/Warhammer_40k_Wiki"><img width="100px" src="https://static.wikia.nocookie.net/warhammer40k/images/5/55/AnkhoftheTriarch9thEdition.jpg"></a></td>
+                    <td><a href="https://warhammer40k.fandom.com/wiki/Warhammer_40k_Wiki"><img id="warhammer" width="100px" src="https://static.wikia.nocookie.net/warhammer40k/images/5/55/AnkhoftheTriarch9thEdition.jpg"></a></td>
                 </tr>
                 <tr>
                     <td>D&D</td>
@@ -68,5 +68,24 @@
             <p><a href="https://granadahigh.livermoreschools.org/">My school</a></p>
             <p><a href="mailto:bethany.moo@lvjusd.org">Email Me</a></p>
         </footer>
+        <script>
+            setInterval(swapFactionImage, 3000);
+            function swapFactionImage(){
+                var pic = document.getElementById("warhammer");
+                //console.log(pic.getAttribute("src"));
+                if(pic.getAttribute("src")==="https://static.wikia.nocookie.net/warhammer40k/images/5/55/AnkhoftheTriarch9thEdition.jpg"){
+                    pic.setAttribute("src", "https://static.wikia.nocookie.net/warhammer40k/images/f/f0/T'au_Empire_Icon.png")
+                }
+                else if(pic.getAttribute("src")==="https://static.wikia.nocookie.net/warhammer40k/images/f/f0/T'au_Empire_Icon.png"){
+                    pic.setAttribute("src", "https://static.wikia.nocookie.net/warhammer40k/images/0/0d/LeaguesofVotannIcon.png")
+                }
+                else if(pic.getAttribute("src")==="https://static.wikia.nocookie.net/warhammer40k/images/0/0d/LeaguesofVotannIcon.png"){
+                    pic.setAttribute("src", "https://static.wikia.nocookie.net/warhammer40k/images/0/07/Adeptus_mecanics.jpg")
+                }
+                else if(pic.getAttribute("src")==="https://static.wikia.nocookie.net/warhammer40k/images/0/07/Adeptus_mecanics.jpg"){
+                    pic.setAttribute("src", "https://static.wikia.nocookie.net/warhammer40k/images/5/55/AnkhoftheTriarch9thEdition.jpg")
+                }
+            }
+        </script>
     </body>
 </html>
